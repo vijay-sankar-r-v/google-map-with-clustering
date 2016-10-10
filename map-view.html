@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Google Maps AJAX + mySQL/PHP Example</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<YOUR-GOOGLE-MAP-API-KEY>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-marker-clusterer/1.0.0/markerclusterer_compiled.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/map-icons.css">
+    <script type="text/javascript" src="js/map-icons.js"></script>
+    <script type="text/javascript" src="js/proximity.js"></script>
+
+
+  </head>
+  <body style="margin:0px; padding:0px;" onload="load()"> 
+    <div>
+     <input type="text" id="addressInput" size="10"/>
+    <select id="radiusSelect">
+      <option value="25" selected>25mi</option>
+      <option value="100">100mi</option>
+      <option value="200">200mi</option>
+    </select>
+    <input type="button" onclick="searchLocations()" value="Search"/>
+    </div>
+    <div><select id="locationSelect" style="width:100%;visibility:hidden"></select></div>
+    <div id="map" style="width: 100%; height: 80%"></div>
+  </body>
+</html>
